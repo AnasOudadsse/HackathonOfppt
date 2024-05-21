@@ -52,6 +52,7 @@ class AuthController extends Controller
             'entreprise_id' => 'nullable',
             'etablissement_id' => 'nullable',
             'region_id' => 'required',
+            'role' => 'required',
         ]);
 
         $user = User::create([
@@ -61,6 +62,7 @@ class AuthController extends Controller
             'entreprise_id' => $request->entreprise_id,
             'etablissement_id' => $request->etablissement_id,
             'region_id' => $request->region_id,
+            'role' => $request->role,
         ]);
 
         // $token = Auth::login($user);
