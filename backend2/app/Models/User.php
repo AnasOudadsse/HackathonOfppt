@@ -3,16 +3,18 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use App\Models\Role;
+use App\Models\Region;
+use App\Models\Entreprise;
 use Laravel\Sanctum\HasApiTokens;
 
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class User extends Authenticatable implements JWTSubject
-{
+class User extends Authenticatable{
     use HasApiTokens, HasFactory, Notifiable;
     public function role(){
         return $this->hasOne(Role::class);
@@ -25,7 +27,7 @@ class User extends Authenticatable implements JWTSubject
         return $this->belongsTo(Entreprise::class);
     }
     public function regions(){
-        return $this->belongsTo(Regions::class);
+        return $this->belongsTo(Region::class);
     }
     
     /**
@@ -37,6 +39,10 @@ class User extends Authenticatable implements JWTSubject
         'name',
         'email',
         'password',
+        'role',
+        'entreprise_id',
+        'etablissement_id',
+        'region_id'
     ];
 
     /**
