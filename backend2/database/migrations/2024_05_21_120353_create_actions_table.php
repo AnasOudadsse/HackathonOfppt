@@ -14,15 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('actions', function (Blueprint $table) {
-            $table->foreignId('exercise_id')->constrained('exercises')->onDelete('cascade');
-            $table->foreignId('enterprises_id')->constrained('enterprises')->onDelete('cascade');
-            $table->foreignId('intervenants_id')->constrained('intervenants')->onDelete('cascade');
-            $table->foreignId('etablissements_id')->constrained('etablissements')->onDelete('cascade');
+            $table->id();
+            $table->foreignId('entreprises_id')->constrained()->onDelete('cascade');
+            $table->foreignId('intervenants_id')->constrained()->onDelete('cascade');
+            $table->foreignId('etablissements_id')->constrained()->onDelete('cascade');
             $table->dateTime('date_debut_prev');
             $table->dateTime('date_fin_prev');
             $table->float('prix_real');
             $table->dateTime('date_debut_real');
             $table->dateTime('date_fin_real');
+            $table->String('exercise');
             $table->integer('nbparticipant');
         });
     }

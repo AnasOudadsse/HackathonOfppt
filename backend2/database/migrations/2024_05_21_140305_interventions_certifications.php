@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('regions', function (Blueprint $table) {
+        Schema::create('intervenants_certifications', function (Blueprint $table) {
             $table->id();
-            $table->string('region_name');
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('certification_id')->constrained()->onDelete('cascade');
+            $table->foreignId('intervenant_id')->constrained()->onDelete('cascade');
+            
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('regions');
+        //
     }
 };
