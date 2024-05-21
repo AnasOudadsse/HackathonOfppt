@@ -1,8 +1,14 @@
+import CompanyPotential from "../CompanyPotential/CompanyPotential";
+import ContinousTraining from "../ContinuousTraining/ContinousTraning";
+import SwiperSection from "../swiperSection/SwiperSection";
+
 const Home = () => {
   return (
-    <div>
-      <h1>hello world</h1>
-    </div>
+    <>
+        <SwiperSection />
+        <ContinousTraining />
+        <CompanyPotential />
+    </>
   );
 };
 

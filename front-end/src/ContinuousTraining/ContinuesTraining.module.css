@@ -1,0 +1,32 @@
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.first { 
+    width: 50%;
+}
+
+.second {
+    width: 5em;
+    height: 5em;
+}
+
+.para {
+    padding-top: 5;
+    padding-bottom: 5em;
+}
+
+.button {
+    background: black;
+    color: white;
+    padding: .3em 1em;
+    border-radius: .5em;
+}
+
+.image {
+    height: 20em;
+}

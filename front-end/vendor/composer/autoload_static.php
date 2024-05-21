@@ -49,6 +49,7 @@ class ComposerStaticInit14555b719a80e9623fa8b26b2728a5c2
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Container\\' => 14,
             'Psr\\Clock\\' => 10,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'L' => 
         array (
@@ -151,6 +152,10 @@ class ComposerStaticInit14555b719a80e9623fa8b26b2728a5c2
         array (
             0 => __DIR__ . '/..' . '/psr/clock/src',
         ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'Laravel\\Sanctum\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/sanctum/src',
@@ -161,9 +166,9 @@ class ComposerStaticInit14555b719a80e9623fa8b26b2728a5c2
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
             1 => __DIR__ . '/..' . '/illuminate/conditionable',
-            2 => __DIR__ . '/..' . '/illuminate/collections',
+            2 => __DIR__ . '/..' . '/illuminate/macroable',
             3 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Pipeline\\' => 
