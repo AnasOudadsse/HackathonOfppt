@@ -14,7 +14,20 @@ use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 class User extends Authenticatable implements JWTSubject
 {
     use HasApiTokens, HasFactory, Notifiable;
+    public function role(){
+        return $this->hasOne(Role::class);
 
+    }
+    public function entreprise(){
+        return $this->belongsTo(Entreprise::class);
+    }
+    public function etablissement(){
+        return $this->belongsTo(Entreprise::class);
+    }
+    public function regions(){
+        return $this->belongsTo(Regions::class);
+    }
+    
     /**
      * The attributes that are mass assignable.
      *
