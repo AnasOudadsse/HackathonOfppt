@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Entreprise extends Model
 {
     use HasFactory;
+    public function users(){
+        return $this->hasMany(User::class);
+    }
+    public function plans(){
+        return $this->hasMany(Plab::class);
+    }
 }

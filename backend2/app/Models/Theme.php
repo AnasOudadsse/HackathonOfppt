@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Theme extends Model
 {
     use HasFactory;
+    public function action(){
+        return $this->hasOne(Action::class);
+    }
+    public function plans(){
+        return $this->hasMany(Plan::class);
+    }
 }
