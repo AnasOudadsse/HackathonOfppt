@@ -1,0 +1,52 @@
+.img {
+    width: 100vw;
+    height: 40em;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.swiper {
+    position: absolute;
+    background-image: url("../../public/swiper/image4.jpg");
+    height: 40em;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+.body {
+    background-color: rgba(0, 0, 0, 0.386);
+    position: relative;
+    height: 40em;
+    width: 100vw;
+}
+
+.h1 {
+    color: white;
+    background-color: transparent;
+    padding-top: 5em;
+    padding-left: 5%;
+}
+
+.para {
+    width: 80%;
+    margin: auto;
+    display: block;
+    color: white;
+    animation: anime .5s ease;
+}
+
+@keyframes anime {
+    0% {
+        left: -10em;
+    }
+
+    100% {
+        left: 0;
+    }
+}
