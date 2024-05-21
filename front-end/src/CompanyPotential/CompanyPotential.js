@@ -9,17 +9,17 @@ const CompanyPotential = () => {
         <p>Our platform provides comprehensive solutions to help Moroccan companies thrive. </p>
       </div>
 
-      <div>
-        <div>
-            <h1>Training Management</h1>
+      <div className={`${style.cards}`}>
+        <div className={`${style.card}`}>
+            <h3>Training Management</h3>
             <p>Streamline your employee training with our intuitive platform. </p>
         </div>
         <div>
-            <h1>Training Management</h1>
+            <h3>Training Management</h3>
             <p>Streamline your employee training with our intuitive platform. </p>
         </div>
         <div>
-            <h1>Training Management</h1>
+            <h3>Training Management</h3>
             <p>Streamline your employee training with our intuitive platform. </p>
         </div>
       </div>
