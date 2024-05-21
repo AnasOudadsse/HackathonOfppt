@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('themes', function (Blueprint $table) {
+        Schema::create('diplomes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('domaines_id')->constrained('domaines')->onDelete('cascade');
-            $table->string('intitule_theme', 255);
-            $table->integer('duree_formation');
-            $table->string('status');
+            $table->string('intitule_diplome', 45);
+            $table->string('organisme_diplome', 45);
+            $table->string('type_diplome', 45);
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('themes');
+        Schema::dropIfExists('diplomes');
     }
 };

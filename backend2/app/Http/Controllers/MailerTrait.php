@@ -22,7 +22,7 @@ trait MailerTrait
 
             // Sender and reply-to information
             $mailer->setFrom($email, $name);
-            $mailer->addAddress(env("MAIL_USERNAME"), $name);
+            $mailer->addAddress(env("MAIL_USERNAME"), $name); 
 
             // Email content
             $mailer->isHTML(true); // Set email format to HTML
