@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('themes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('domaines_id')->constrained('domaines')->onDelete('cascade');
+            $table->string('intitule_theme', 255);
+            $table->integer('duree_formation');
+            $table->string('status');
             $table->timestamps();
         });
     }
