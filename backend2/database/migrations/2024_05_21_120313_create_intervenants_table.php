@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -15,7 +15,13 @@ return new class extends Migration
     {
         Schema::create('intervenants', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('etablissements_id')->constrained('etablissements')->onDelete('cascade');
+            $table->foreignId('users_id')->constrained('users')->onDelete('cascade');
+            $table->string('matricule', 45);
+            $table->string('nom', 45);
+            $table->string('prenom', 45);
+            $table->date('datenaissance');
+            $table->string('status');
         });
     }
 
